@@ -8,32 +8,31 @@ class TreeNode {
 }
 
 class BinarySearchTree {
-
   constructor() {
     // Your code here
-    this.root=null;
+    this.root = null;
   }
 
-  insert(val, currentNode=this.root) {
+  insert(val, currentNode = this.root) {
     // Your code here
-    let node=new TreeNode(val);
-    if(!this.root) this.root=node;
-    else{
-      while(currentNode){
-        let currentValue=currentNode.val;
-        if(currentValue>val){
-          if(!currentNode.left){
-            currentNode.left=node;
+    let node = new TreeNode(val);
+    if (!this.root) this.root = node;
+    else {
+      while (currentNode) {
+        let currentValue = currentNode.val;
+        if (currentValue > val) {
+          if (!currentNode.left) {
+            currentNode.left = node;
             break;
-          }else{
-            currentNode=currentNode.left;
+          } else {
+            currentNode = currentNode.left;
           }
-        }else{
-          if(!currentNode.right){
-            currentNode.right=node;
+        } else {
+          if (!currentNode.right) {
+            currentNode.right = node;
             break;
-          }else{
-            currentNode=currentNode.right;
+          } else {
+            currentNode = currentNode.right;
           }
         }
       }
@@ -44,22 +43,19 @@ class BinarySearchTree {
     // Your code here
   }
 
-
   preOrderTraversal(currentNode = this.root) {
     // Your code here
   }
-
 
   inOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
   postOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-    // Breadth First Traversal - Iterative
+  // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // your code here
   }
@@ -67,7 +63,7 @@ class BinarySearchTree {
   // Depth First Traversal - Iterative
   depthFirstTraversal() {
     // your code here
-}
+  }
 }
 
 module.exports = { BinarySearchTree, TreeNode };
